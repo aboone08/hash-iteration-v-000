@@ -12,7 +12,7 @@ def happy_birthday(birthday_kids)
 end
 
 def age_appropriate_birthday(birthday_kids)
-  happy_birthday(birthday_kids).collect.merge(happy_birthday(birthday_kids)) do |kids_name, age|
+  birthday_kids.collect.merge(happy_birthday(birthday_kids)) do |kids_name, age|
     age > 12
     puts "You are too old for this."
   end
